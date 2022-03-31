@@ -32,11 +32,32 @@ class Home extends StatelessWidget {
     Text bodyText = Text(bodySting);
     return Scaffold(
         appBar: myAppbar,
-        body : Center(
-                  child: IconButton(
-                    onPressed: () { print('You clicked me!'); },
-                    icon: Icon(Icons.mail_outlined),
-                  )
+        body : Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Text('Hole'),
+            FlatButton(
+              child: Text('Segundo\ntexto'),
+              onPressed: () {},
+              color: Colors.blue,
+            ),
+            RaisedButton.icon(
+                  onPressed: () {},
+                  icon: Icon(
+                      Icons.mail,
+                  ),
+                  label: Text('Click\nme!\nmore'),
+                  color: bgColor,
+              )
+          ],
+        ),
+
+        //    Center(
+        //           child: IconButton(
+        //             onPressed: () { print('You clicked me!'); },
+        //             icon: Icon(Icons.mail_outlined),
+        //           )
                   // RaisedButton.icon(
                   //     onPressed: () {},
                   //     icon: Icon(
@@ -47,7 +68,7 @@ class Home extends StatelessWidget {
                   // )
                   //   FlatButton(
                   //   onPressed: () { print('You clicked me!');  },
-                  //   child: Text('Prueba abc'),
+                  //   child: Text('Prue abc'),
                   //   color: bgColor,
                   // )
                   // Icon(
@@ -72,12 +93,12 @@ class Home extends StatelessWidget {
                       //                     ),
                       //         textAlign: TextAlign.right,
                       //         ),
-                      ),
+
         floatingActionButton:
                       const FloatingActionButton( onPressed: incCounter,
                                                   child : Text('*'),
                                                   backgroundColor: bgColor,
                                                 ),
-                );
+            );
   }
 }
