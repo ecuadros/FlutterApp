@@ -33,12 +33,36 @@ class Home extends StatelessWidget {
     return Scaffold(
         appBar: myAppbar,
         body : Center(
-                  child: Image(
+                  child: IconButton(
+                    onPressed: () { print('You clicked me!'); },
+                    icon: Icon(Icons.mail_outlined),
+                  )
+                  // RaisedButton.icon(
+                  //     onPressed: () {},
+                  //     icon: Icon(
+                  //         Icons.mail,
+                  //     ),
+                  //     label: Text('Click me!'),
+                  //     color: bgColor,
+                  // )
+                  //   FlatButton(
+                  //   onPressed: () { print('You clicked me!');  },
+                  //   child: Text('Prueba abc'),
+                  //   color: bgColor,
+                  // )
+                  // Icon(
+                  //     Icons.carpenter,
+                  //     color: bgColor,
+                  //     size: 100,
+                  // )
+
+                    // Image(
                     //image: NetworkImage('https://cdn.wallpapersafari.com/85/87/3JpDli.jpg')
                     // image: Image.asset('assets/mobile1.jpg'),
                     // image: AssetImage('assets/mobile1.jpg'),
-                    image: Image.asset('assets/mobile1.jpg'),
-                  )
+                    // image: Image.asset('assets/mobile1.jpg'),
+                    // )
+
                       // Text('Button pressed $counter times bbc',
                       //         style: const TextStyle(fontSize: 20,
                       //                               fontWeight: FontWeight.bold,
